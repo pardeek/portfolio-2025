@@ -1,0 +1,36 @@
+/*Global Styling*/
+:root {
+    --base: #FCFCF9;
+    --contrast: #8E5A35;
+    --accent-light: #EBEBEB;
+    --accent-medium: #FFBB70;
+    --accent-dark: #ED9455;
+    --cta: #6DA486;
+    --cta-hover: #4f8366;
+}
+
+* {    
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--base);
+}
+
+p, h1, h2, h3, h4, h5, h6, caption, li, a {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+    margin: 4px 0;
+}
+
+.content-width {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
