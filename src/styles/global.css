@@ -51,6 +51,7 @@ main {
 section {
     scroll-snap-align: start;
     height: 100vh;
+    overflow-y: hidden;
 }
 
 img {
@@ -98,6 +99,10 @@ h2, h3, h4, h6 {
     font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
+h2 {
+    font-size: 1.1rem;
+}
+
 h4 {
     font-size: 1.2rem;
 }
@@ -106,17 +111,21 @@ h4 {
     h1, .title-font {
         font-size: 4rem;
     }
+
+    h2 {
+        font-size: 1.4rem;
+    }
 }
 
 /*Page Containers Styling*/
 .col, .half-col {
     display: flex;
     flex-direction: column;
-    gap: .4rem;
+    gap: .6rem;
 }
 
 .half-col {
-    width: 80%;
+    width: 90%;
 }
 
 @media screen and (min-width: 800px) {
@@ -244,7 +253,7 @@ h4 {
     font-size: .8rem;
 }
 
-@media screen and (min-width: 300) {
+@media screen and (min-width: 800px) {
     .hmd-button-1 {
         font-size: 1rem;
         padding: 10px 24px;
@@ -263,16 +272,16 @@ h4 {
 
 .tech-stack-mobile {
     display: grid;
-    grid-template-columns: 4rem 4rem 4rem;
+    grid-template-columns: 3rem 3rem 3rem;
     grid-template-rows: auto;
-    gap: .5rem;
+    gap: .4rem;
     margin: 2rem 0;
 }
 
 .tech-stack-mobile-item {
-    width: 4rem;
-    height: 4rem;
-    padding: 10px;
+    width: 3rem;
+    height: 3rem;
+    padding: 8px;
     border-radius: 10px;
     background-color: var(--contrast);
 }
