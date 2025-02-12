@@ -1,9 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
-import TestComponent from '../components/TestComponent'
+import HomePage from '../components/HomePage';
+import ProjectsPage from '../components/ProjectsPage';
+import SkillsPage from '../components/SkillsPage';
+import ContactPage from '../components/ContactPage';
+import BubbleNavigation from '../components/BubbleNavigation';
 ---
 
 <Layout>
-	<TestComponent />
+    <BubbleNavigation 
+        pages={[
+            {title: 'Home', anchor: 'home'},
+            {title: 'Projects', anchor: 'projects'},
+            {title: 'Skills', anchor: 'skills'},
+            {title: 'Contact', anchor: 'contact'},
+        ]}
+        client:load 
+    />
+    <section id='home' class='homepage'>        
+	    <HomePage client:load />
+    </section>
+    <section id='projects' class='page'>
+        <ProjectsPage client:load />
+    </section>
+    <section id='skills' class='page'>
+        <SkillsPage client:load />
+    </section>
+    <section id='contact' class='page'>
+        <ContactPage client:load />
+    </section>
 </Layout>
