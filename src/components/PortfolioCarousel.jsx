@@ -45,13 +45,7 @@ const ProjectCarousel = () => {
                                 link={project.caseStudy}
                             />
                             {project.visit && (
-                                <DirectionalButtonFill
-                                    isSmall={true} 
-                                    isFilled={false}
-                                    client:load
-                                    text='Visit'
-                                    link={project.visit}
-                                />
+                                <a href={project.visit} className='hmd-button-1 outline small'>Visit</a>
                             )}
                             
                         </div>

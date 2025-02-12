@@ -12,8 +12,10 @@ const SkillsCards = () => {
         <div className='skills-cards-container'>
             {skills.map((skill) => (
                 <div key={skill.name} className='skills-card'>
-                    <h4>{skill.name}</h4>
-                    <p>{skill.text}</p>
+                    <div className='skills-card-slider'>
+                        <h4>{skill.name}</h4>
+                        <p>{skill.text}</p>
+                    </div>
                 </div>
             ))}
         </div>

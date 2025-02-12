@@ -16,13 +16,23 @@ const TechStack = () => {
     const [ isFlipping, setIsFlipping ] = useState(false);
 
     return (
-        <div className={`tech-stack ${isFlipping ? 'flipping' : ''}`} onClick={() => setIsFlipping(true)} onMouseLeave={() => setIsFlipping(false)}>
-            {stack.map((item) => (
-                <div key={item.name} className='tech-stack-item' data-yoe={item.yoe} data-tech={item.name}>
-                    <img src={item.src} alt={`${item.name}  - ${item.yoe}`} />
-                </div>
-            ))}
+        <div>
+            <div className={`tech-stack-desktop ${isFlipping ? 'flipping' : ''}`} onClick={() => setIsFlipping(true)} onMouseLeave={() => setIsFlipping(false)}>
+                {stack.map((item) => (
+                    <div key={item.name} className='tech-stack-desktop-item' data-yoe={item.yoe} data-tech={item.name}>
+                        <img src={item.src} alt={`${item.name}  - ${item.yoe}`} />
+                    </div>
+                ))}
+            </div>
+            <div className='tech-stack-mobile'>
+                {stack.map((item) => (
+                    <div key={item.name} className='tech-stack-mobile-item' data-yoe={item.yoe} data-tech={item.name}>
+                        <img src={item.src} alt={`${item.name}  - ${item.yoe}`} />
+                    </div>
+                ))}
+            </div>
         </div>
+        
     )
 }
 

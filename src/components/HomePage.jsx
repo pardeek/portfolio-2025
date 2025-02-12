@@ -11,7 +11,7 @@ const HomePage = () => {
                     client:load 
                     text='Front-end Web Developer'
                 />
-                <p>Proficient in HTML, CSS, JavaScript (ES6), and React.</p>
+                <p>Welcome to my portfolio, built with Astro and React. I designed and wrote every line of code to build this site - no templates, no AI code. Check out my companion web dev blog built with Wordpress below.</p>
                 
             </div>
             <div className='button-cont'>
@@ -22,13 +22,7 @@ const HomePage = () => {
                     text='Get in Touch'
                     link='#contact'
                 />
-                <DirectionalButtonFill 
-                    isSmall={false}
-                    isFilled={false}
-                    client:load
-                    text='Read my blog'
-                    link='https://blog.katiepardee.com'
-                />
+                <a className='hmd-button-1 outline' href='https://blog.katiepardee.com'>Read my blog</a>
             </div>
             <TechStack client:load />
         </div>
