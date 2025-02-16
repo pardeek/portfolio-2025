@@ -37,20 +37,20 @@
 }
 
 html, body {
-    min-height: 100vh;
+    min-height: 100dvh;
     scroll-behavior: smooth;
 }
 
 main {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
+    height: 100dvh;
     position: relative;
 }
 
 section {
     scroll-snap-align: start;
-    height: 100vh;
+    height: 100dvh;
     overflow-y: hidden;
 }
 
