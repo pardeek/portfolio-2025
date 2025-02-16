@@ -68,30 +68,33 @@ const ProjectCarousel = () => {
             <div className='carousel-wrapper'>
                 <div className='carousel-shifter' data-shift={shift}>
                     {projects.map((project) => (
-                        <div className='carousel-item' key={project.head}>
+                        <div className='carousel-item-wrapper' key={project.head}>
                             <a href={project.visit} target='_blank' className='carousel-item-image'>
                                 <img src={project.src} alt={`${project.head} site screenshot`} />
                             </a>
-                            <div className='carousel-item-content'>
-                                <h4>{project.head}</h4>
-                                <h5>{project.subhead}</h5>
-                                <p>{project.text}</p>
-                                <div className='button-cont'>
-                                    <DirectionalButtonFill
-                                        isSmall={true} 
-                                        isFilled={true}
-                                        client:load
-                                        text='Case Study'
-                                        link={project.caseStudy}
-                                    />
-                                    {project.visit && (
-                                        <a href={project.visit} className='hmd-button-1 outline small'>Visit</a>
-                                    )}
-                                    
+                            <div className='carousel-item'>
+                                <div className='carousel-item-content'>
+                                    <h4>{project.head}</h4>
+                                    <h5>{project.subhead}</h5>
+                                    <p>{project.text}</p>
+                                    <div className='button-cont'>
+                                        <DirectionalButtonFill
+                                            isSmall={true} 
+                                            isFilled={true}
+                                            client:load
+                                            text='Case Study'
+                                            link={project.caseStudy}
+                                        />
+                                        {project.visit && (
+                                            <a href={project.visit} className='hmd-button-1 outline small'>Visit</a>
+                                        )}
+                                        
+                                    </div>
                                 </div>
+                                
                             </div>
-                            
                         </div>
+
                     ))}
                     <div className='carousel-item'>
                         <h4>See my GitHub</h4>
