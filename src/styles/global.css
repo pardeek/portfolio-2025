@@ -92,11 +92,13 @@ img {
     display: none;
 }
 
-@media screen and (min-height: 800px) {
+@media screen and (min-height: 700px) {
     .page-subtitle {
         display: block;
     }
+}
 
+@media screen and (min-height: 850px) { 
     .page-description {
         display: block;
     }
@@ -385,8 +387,8 @@ h4 {
 
 
 /*Carousel Styling*/
-.carousel-wrapper {
-    margin: 2rem 0;
+.carousel-parent {
+    margin: 2rem 0 0 0;
 }
 
 .carousel-shifter {
