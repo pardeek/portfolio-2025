@@ -51,7 +51,7 @@ const ProjectCarousel = () => {
     }
 
     const handleRightClick = () => {
-        if (shift < (projects.length)) {
+        if (shift < (projects.length - 1)) {
             setShift(shift + 1);
         } else return;
     }
@@ -96,16 +96,13 @@ const ProjectCarousel = () => {
                         </div>
 
                     ))}
-                    <div className='carousel-item'>
-                        <h4>See my GitHub</h4>
-                    </div>
                 </div>
             </div>
             
             <div 
                 onClick={handleRightClick}
             >
-                <svg className={`carousel-button ${shift > (projects.length - 1) ? 'inactive' : ''}`} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <svg className={`carousel-button ${shift > (projects.length - 2) ? 'inactive' : ''}`} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="50" r="50" />
                 </svg>
             </div>
