@@ -8,7 +8,7 @@
     --cta: rgb(204, 153, 1);
     --cta-hover: rgb(165, 124, 0);
     --content-width: 1200px;
-    --content-padding-x: 2vw;
+    --content-padding-x: 4vw;
 }
 
 @font-face {
@@ -92,7 +92,7 @@ p, caption, li, a, ::before, ::after, h5 {
 
 h1, .title-font {
     font-family: Playfair, 'Times New Roman', Times, serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 8.5vw, 4rem);
 }
 
 h2, h3, h4, h6 {
@@ -100,21 +100,11 @@ h2, h3, h4, h6 {
 }
 
 h2 {
-    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
 }
 
 h4 {
     font-size: 1.2rem;
-}
-
-@media screen and (min-width: 800px) {
-    h1, .title-font {
-        font-size: 4rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
 }
 
 /*Page Containers Styling*/
@@ -371,10 +361,50 @@ h4 {
 
 
 /*Carousel Styling*/
-.carousel-container {
+.carousel-parent {
     display: flex;
-    margin-top: 120px;
+    align-items: center;
+    justify-content: space-between;
     gap: 1rem;
+}
+
+.carousel-wrapper {
+    overflow-x: hidden;
+}
+
+.carousel-shifter {
+    display: flex;
+    margin-top: 110px;
+    gap: 20px;
+    transition: transform 300ms ease;
+}
+
+.carousel-shifter[data-shift="1"] {    
+    transform: translateX(-300px);
+}
+
+.carousel-shifter[data-shift="2"] {    
+    transform: translateX(calc(-300px * 2));
+}
+
+.carousel-shifter[data-shift="3"] {    
+    transform: translateX(calc(-300px * 3));
+}
+
+.carousel-shifter[data-shift="4"] {    
+    transform: translateX(calc(-300px * 4));
+}
+
+.carousel-shifter[data-shift="5"] {    
+    transform: translateX(calc(-300px * 5));
+}
+
+.carousel-shifter[data-shift="6"] {    
+    transform: translateX(calc(-300px * 6));
+}
+
+.carousel-shifter[data-shift="7"] {    
+    transform: translateX(calc(-300px * 7));
 }
 
 .carousel-item {
@@ -382,22 +412,40 @@ h4 {
     flex-direction: column;
     background-color: var(--contrast);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 1.6rem;
+    width: 280px;
+    min-width: 280px;
+
 }
 
 .carousel-item-image {
-    width: 80%;
-    margin: -120px auto 10px auto;
+    width: 70%;
+    margin: -100px auto 10px auto;
 }
 
 .carousel-item-content {
     display: flex;
     flex-direction: column;
-    gap: .4rem;
+    gap: .2rem;
 }
 
 .carousel-item-content p {
     margin-top: 1rem;
+}
+
+.carousel-button {    
+    width: 32px;
+    fill: var(--base);
+}
+
+.carousel-button.inactive {
+    opacity: .2;
+}
+
+@media screen and (min-width: 500px) {
+    .carousel-parent {
+        gap: 2rem;
+    }
 }
 
 /*Skills Cards Styling*/
