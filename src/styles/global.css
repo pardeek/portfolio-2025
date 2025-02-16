@@ -85,6 +85,24 @@ img {
     background-attachment: fixed;
 }
 
+.page-subtitle {
+    display: none;
+}
+
+.page-description {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .page-subtitle {
+        display: block;
+    }
+
+    .page-description {
+        display: block;
+    }
+}
+
 /*Typography Styling*/
 p, caption, li, a, ::before, ::after, h5 {
     font-family: Raleway, Arial, Helvetica, sans-serif, sans-serif;

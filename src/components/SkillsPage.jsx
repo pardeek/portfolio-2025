@@ -8,7 +8,6 @@ const SkillsPage = () => {
                 <h2>4+ years in Web Development</h2>
                 <p>Proficient in HTML, CSS, JavaScript (ES6), and React.</p>                
             </div>
-            <SkillsCards client:load />
         </div>
     ) 
 }
