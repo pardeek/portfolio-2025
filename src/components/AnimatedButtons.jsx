@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 
-export const DirectionalButtonFill = ({ text, link, isFilled, isSmall }) => {
+export const DirectionalButtonFill = ({ text, link, isFilled, isSmall, rel = undefined, target = '_self' }) => {
     const [ buttonSide, setButtonSide ] = useState('');
     const [ hasHoverClass, setHasHoverClass] = useState(false);
     const button = useRef(null);
@@ -48,6 +48,8 @@ export const DirectionalButtonFill = ({ text, link, isFilled, isSmall }) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             data-buttonside={buttonSide}
+            rel={rel}
+            target={target}
         >{text}</a>
     )
 }

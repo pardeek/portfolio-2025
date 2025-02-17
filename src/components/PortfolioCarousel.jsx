@@ -9,36 +9,46 @@ const ProjectCarousel = () => {
             subhead: 'Astro | Tailwind | Netlify', 
             text: 'Personal freelance brochure site built with Astro and Tailwind and deployed via Netlify.', 
             src: '/images/halfmoon.webp',
-            caseStudy: 'https://blog.katiepardee.com',
             visit: 'https://halfmoondesigns.co'
         }, {
             head: 'Corvallis Celtic Festival Website', 
             subhead: 'Astro | Contentful | Netlify', 
             text: 'Client site for annual music and culture festival built with Astro and Contentful headless CMS and deployed via Netlify.', 
             src: '/images/celtic.webp',
-            caseStudy: 'https://blog.katiepardee.com',
-            visit: 'https://corvalliscelticfestival.org'
-        }, {
-            head: 'Figma UI Portfolio', 
-            subhead: 'Astro | Contentful | Netlify', 
-            text: 'Client site for annual music and culture festival built with Astro and Contentful headless CMS and deployed via Netlify.', 
-            src: '/images/Figma.Portfolio.webp',
-            caseStudy: 'https://blog.katiepardee.com',
+            caseStudy: 'https://blog.katiepardee.com/case-study-corvallis-celtic-festival-website/',
             visit: 'https://corvalliscelticfestival.org'
         }, {
             head: "Katie's Web Dev Blog", 
-            subhead: 'Astro | Contentful | Netlify', 
-            text: 'Client site for annual music and culture festival built with Astro and Contentful headless CMS and deployed via Netlify.', 
-            src: '/images/celtic.webp',
-            caseStudy: 'https://blog.katiepardee.com',
-            visit: 'https://corvalliscelticfestival.org'
+            subhead: 'Wordpress | Custom Gutenberg', 
+            text: 'My Web Dev Blog where I write about projects and other topics.', 
+            src: '/images/blog.webp',
+            caseStudy: 'https://blog.katiepardee.com/customizing-gutenbergs-rich-text-editor-toolbar-to-add-tooltip-formatting/',
+            visit: 'https://blog.katiepardee.com'
         }, {
-            head: 'Another Project', 
-            subhead: 'Astro | Contentful | Netlify', 
-            text: 'Client site for annual music and culture festival built with Astro and Contentful headless CMS and deployed via Netlify.', 
-            src: '/images/celtic.webp',
-            caseStudy: 'https://blog.katiepardee.com',
-            visit: 'https://corvalliscelticfestival.org'
+            head: 'DIY Plans and More', 
+            subhead: 'Astro | Headless Wordpress | Netlify', 
+            text: 'Work in progress client site.', 
+            src: '/images/diyPlans.webp',
+            visit: 'https://diyplans.netlify.app/'
+        }, {
+            head: 'Previous Portfolio', 
+            subhead: 'Astro | Netlify', 
+            text: 'My previous personal portfolio.', 
+            src: '/images/previousPortfolio.webp',
+            visit: 'https://katieastroportfolio.netlify.app/',
+            caseStudy: 'https://blog.katiepardee.com/diving-deep-into-usestate-useeffect-and-useref-a-simple-mobile-menu-with-react/'
+        }, {
+            head: 'Home Taught Blog', 
+            subhead: 'Wordpress | Avada', 
+            text: 'Blog built with Wordpress and Avada page builder in 2023 for a homeschooling blog.', 
+            src: '/images/hometaught.webp',
+            visit: 'https://thehometaught.com/'
+        }, {
+            head: 'Figma UI Portfolio', 
+            subhead: 'Showcasing Design Sensibilities', 
+            text: 'A handful of my brochure website mockups for desktop.', 
+            src: '/images/figmaPortfolio.webp',
+            visit: 'https://www.figma.com/design/cuVDNwlA51Nt7R5Ee8RsdC/Pitch-Mockups-(Shared)?node-id=0-1&t=SChP4wqeha4F3YYe-1'
         }
     ]
 
@@ -62,7 +72,7 @@ const ProjectCarousel = () => {
                 onClick={handleLeftClick}
             >
                 <svg className={`carousel-button ${shift <= (0) ? 'inactive' : ''}`} width="29" height="69" viewBox="0 0 29 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M25 4L5 33.7078L25 65" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                    <path d="M25 4L5 33.7078L25 65" stroke="white" strokeWidth="7" strokeLinecap="round"/>
                 </svg>
             </div>
             <div className='carousel-wrapper'>
@@ -78,15 +88,20 @@ const ProjectCarousel = () => {
                                     <h5>{project.subhead}</h5>
                                     <p>{project.text}</p>
                                     <div className='button-cont'>
-                                        <DirectionalButtonFill
-                                            isSmall={true} 
-                                            isFilled={true}
-                                            client:load
-                                            text='Case Study'
-                                            link={project.caseStudy}
-                                        />
                                         {project.visit && (
-                                            <a href={project.visit} className='hmd-button-1 outline small'>Visit</a>
+                                            <DirectionalButtonFill
+                                                isSmall={true} 
+                                                isFilled={true}
+                                                client:load
+                                                text='Visit'
+                                                link={project.visit}
+                                                rel='nofollow'
+                                                target='_blank'
+                                            />
+                                        )}
+                                        
+                                        {project.caseStudy && (
+                                            <a href={project.caseStudy} className='hmd-button-1 outline small'>Case Study</a>
                                         )}
                                         
                                     </div>
@@ -103,7 +118,7 @@ const ProjectCarousel = () => {
                 onClick={handleRightClick}
             >
                 <svg className={`carousel-button ${shift > (projects.length - 2) ? 'inactive' : ''}`} width="29" height="69" viewBox="0 0 29 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 4L24 33.7078L4 65" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                    <path d="M4 4L24 33.7078L4 65" stroke="white" strokeWidth="7" strokeLinecap="round"/>
                 </svg>
             </div>
         </div>
