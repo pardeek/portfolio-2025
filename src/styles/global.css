@@ -122,6 +122,7 @@ img {
 /*Typography Styling*/
 p, caption, li, a, ::before, ::after, h5 {
     font-family: Raleway, Arial, Helvetica, sans-serif, sans-serif;
+    line-height: 1.4rem;
 }
 
 h1, .title-font {
@@ -396,7 +397,7 @@ button.hmd-button-1:hover {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         text-align: center;
-        transform: translateY(calc((.5rem * 2) + .8rem));
+        transform: translateY(calc((.5rem * 2) + .8rem + .4rem));
         color: transparent;
         transition: transform ease 100ms, color ease 200ms;
         z-index: -1;
@@ -545,7 +546,8 @@ button.hmd-button-1:hover {
     overflow-x: scroll;
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
+    scroll-snap-type: x mandatory;
 }
 
 .skills-card {
@@ -554,6 +556,7 @@ button.hmd-button-1:hover {
     padding: 1rem;
     width: 18rem;
     min-width: 18rem;
+    scroll-snap-align: start;
 }
 
 .skills-card-slider {

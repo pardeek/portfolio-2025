@@ -5,19 +5,9 @@ import HomePage from '../components/HomePage';
 import ProjectsPage from '../components/ProjectsPage';
 import SkillsPage from '../components/SkillsPage';
 import ContactPage from '../components/ContactPage.astro';
-import BubbleNavigation from '../components/BubbleNavigation';
 ---
 
 <Layout>
-    <BubbleNavigation 
-        pages={[
-            {title: 'Home', anchor: 'home'},
-            {title: 'Projects', anchor: 'projects'},
-            {title: 'Skills', anchor: 'skills'},
-            {title: 'Contact', anchor: 'contact'},
-        ]}
-        client:load 
-    />
     <section id='home' class='homepage'>        
 	    <HomePage client:load />
     </section>
