@@ -1,36 +1,39 @@
-
-        <div class='content-width'>
-            <div class="col">
-                <h2 class='title-font'>Get in touch</h2>
-                <h2>Like what you see? Let's connect.</h2>               
-            </div>
-            <div>
-                <form class='contact-form' name="contact" method="POST" netlify action='/thank-you'>
-                    <input 
-                        type='text'
-                        placeholder='First Name (required)'
-                        id='fname'
-                        required
-                    />
-                    <input 
-                        type='text'
-                        placeholder='Last Name (required)'
-                        id='lname'
-                        required
-                    />
-                    <input 
-                        type='email'
-                        id='email'
-                        placeholder='Email Address (required)'
-                        required
-                    />
-                    <textarea 
-                        rows='6'
-                        placeholder='Message (required)'
-                        id='message'
-                        required
-                    />
-                    <button class='hmd-button-1' type='submit'>Send</button>
-                </form>
-            </div>
-        </div>
+<div class='content-width'>
+    <div class="col">
+        <h2 class='title-font'>Get in touch</h2>
+        <h2>Like what you see? Let's connect.</h2>               
+    </div>
+    <div>
+        <form class='contact-form' name="contact" method="POST" netlify action='/thank-you'>
+            <label for='fname' class='hidden'>First Name</label>
+            <input 
+                type='text'
+                placeholder='First Name (required)'
+                id='fname'
+                required
+            />
+            <label for='lname' class='hidden'>Last Name</label>
+            <input 
+                type='text'
+                placeholder='Last Name (required)'
+                id='lname'
+                required
+            />
+            <label for='email' class='hidden'>Email Address</label>
+            <input 
+                type='email'
+                id='email'
+                placeholder='Email Address (required)'
+                required
+            />
+            <label for='message' class='hidden'>Message</label>
+            <textarea 
+                rows='6'
+                placeholder='Message (required)'
+                id='message'
+                required
+            />
+            <button class='hmd-button-1' type='submit'>Send</button>
+        </form>
+    </div>
+</div>
