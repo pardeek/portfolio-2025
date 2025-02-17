@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import '../styles/global.css';
+import { DirectionalButtonFill } from '../components/AnimatedButtons';
+---
+
+<Layout>
+    <div class="thank-you-page">
+        <h1>Uh-oh!</h1>
+        <p>The page you're looking for doesn't seem to exist!</p>
+        <DirectionalButtonFill 
+            isSmall={false}
+            isFilled={true}
+            client:load
+            text='Home'
+            link='/'    
+        />
+    </div>
+</Layout>
