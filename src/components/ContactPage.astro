@@ -1,17 +1,11 @@
-const ContactPage = () => {
-    return (
-        <div className='content-width'>
-            <div className="col">
-                <h2 className='title-font'>Get in touch</h2>
+
+        <div class='content-width'>
+            <div class="col">
+                <h2 class='title-font'>Get in touch</h2>
                 <h2>Like what you see? Let's connect.</h2>               
             </div>
             <div>
-                <form className='contact-form' name="contact" method="POST" netlify netlify-honeypot="bot-field" action='/thank-you'>
-                    <p className='hidden'>
-                        <label>
-                        Don’t fill this out if you’re human: <input name="bot-field" />
-                        </label>
-                    </p>
+                <form class='contact-form' name="contact" method="POST" netlify action='/thank-you'>
                     <input 
                         type='text'
                         placeholder='First Name (required)'
@@ -36,11 +30,7 @@ const ContactPage = () => {
                         id='message'
                         required
                     />
-                    <button className='hmd-button-1' type='submit'>Send</button>
+                    <button class='hmd-button-1' type='submit'>Send</button>
                 </form>
             </div>
         </div>
-    )
-}
-
-export default ContactPage;

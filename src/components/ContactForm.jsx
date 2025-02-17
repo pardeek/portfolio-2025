@@ -1,7 +1,7 @@
 const ContactForm = () => {
     return (
         <div>
-            <form className='contact-form' name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action='/thank-you'>
+            <form className='contact-form' name="contact" method="POST" data-netlify="true" netlify netlify-honeypot="bot-field" action='/thank-you'>
                 <p className='hidden'>
                     <label>
                     Don’t fill this out if you’re human: 

@@ -4,7 +4,7 @@ import '../styles/global.css';
 import HomePage from '../components/HomePage';
 import ProjectsPage from '../components/ProjectsPage';
 import SkillsPage from '../components/SkillsPage';
-import ContactPage from '../components/ContactPage';
+import ContactPage from '../components/ContactPage.astro';
 import BubbleNavigation from '../components/BubbleNavigation';
 ---
 
@@ -28,6 +28,6 @@ import BubbleNavigation from '../components/BubbleNavigation';
         <SkillsPage client:load />
     </section>
     <section id='contact' class='page'>
-        <ContactPage client:load />
+        <ContactPage />
     </section>
 </Layout>
