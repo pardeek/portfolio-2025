@@ -1,7 +1,12 @@
 const ContactForm = () => {
     return (
         <div>
-            <form className='contact-form' action='/'>
+            <form className='contact-form' name="contact" method="POST" netlify netlify-honeypot="bot-field" action='/thank-you'>
+                <p className='hidden'>
+                    <label>
+                    Don’t fill this out if you’re human: <input name="bot-field" />
+                    </label>
+                </p>
                 <input 
                     type='text'
                     placeholder='First Name'

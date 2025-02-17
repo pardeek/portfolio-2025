@@ -93,6 +93,10 @@ img {
     display: none;
 }
 
+.hidden {
+    display: none;
+}
+
 @media screen and (min-height: 600px) {
     .page-subtitle {
         display: block;
@@ -268,6 +272,14 @@ h4 {
 .hmd-button-1.outline.small {
     padding: 6px 18px;
     font-size: .8rem;
+}
+
+button.hmd-button-1 {
+    transition: transform 300ms ease;
+}
+
+button.hmd-button-1:hover {
+    transform: scale(1.05, 1.05);
 }
 
 @media screen and (min-width: 800px) {
