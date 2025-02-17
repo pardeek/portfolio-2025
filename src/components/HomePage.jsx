@@ -11,7 +11,7 @@ const HomePage = () => {
                     client:load 
                     text='Front-end Web Developer'
                 />
-                <p>Welcome to my portfolio, built with Astro and React. I designed and wrote every line of code to build this site - no templates, no AI code. Check out my companion web dev blog built with Wordpress below.</p>
+                <p>Proficient in HTML, CSS, JS, and React.</p>
                 
             </div>
             <div className='button-cont'>

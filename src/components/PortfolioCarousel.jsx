@@ -61,8 +61,8 @@ const ProjectCarousel = () => {
             <div
                 onClick={handleLeftClick}
             >
-                <svg className={`carousel-button ${shift <= (0) ? 'inactive' : ''}`} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="50" />
+                <svg className={`carousel-button ${shift <= (0) ? 'inactive' : ''}`} width="29" height="69" viewBox="0 0 29 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 4L5 33.7078L25 65" stroke="white" stroke-width="7" stroke-linecap="round"/>
                 </svg>
             </div>
             <div className='carousel-wrapper'>
@@ -102,8 +102,8 @@ const ProjectCarousel = () => {
             <div 
                 onClick={handleRightClick}
             >
-                <svg className={`carousel-button ${shift > (projects.length - 2) ? 'inactive' : ''}`} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="50" />
+                <svg className={`carousel-button ${shift > (projects.length - 2) ? 'inactive' : ''}`} width="29" height="69" viewBox="0 0 29 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4L24 33.7078L4 65" stroke="white" stroke-width="7" stroke-linecap="round"/>
                 </svg>
             </div>
         </div>

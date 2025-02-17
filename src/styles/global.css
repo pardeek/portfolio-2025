@@ -2,6 +2,7 @@
 :root {
     --base: #ffffff;
     --contrast: #222222;
+    --medium: #3B3B3B;
     --accent-light: #EBEBEB;
     --accent-medium: #BC76DA;
     --accent-dark: rgb(76, 39, 92);
@@ -162,7 +163,7 @@ h4 {
 }
 
 .text-gradient:hover {
-    animation: shimmer 1.5s linear infinite;
+    animation: shimmer 2.5s linear infinite;
 }
 
 /*BubbleNavigation Styling*/
@@ -282,7 +283,7 @@ h4 {
 }
 
 /*TechStack Styling*/
-.tech-stack-desktop, .tech-stack-desktop * {
+.tech-stack-desktop {
     display: none;
 }
 
@@ -300,19 +301,51 @@ h4 {
     padding: 8px;
     border-radius: 10px;
     background-color: var(--contrast);
+    position: relative;
+}
+
+.tech-stack-mobile-item::before {
+    content: attr(data-yoe);
+    position: absolute;
+    background-color: var(--medium);
+    bottom: calc(100% + 9px); 
+    left: 50%;
+    color: var(--base);
+    width: 2.8rem;
+    padding: .2rem;
+    text-align: center;
+    font-size: .8rem;
+    border-radius: 4px;
+    transform: translateX(-1.6rem);
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+}
+
+.tech-stack-mobile-item::after {
+    content: "";
+    position: absolute;
+    bottom: calc(100%);
+    left: 50%;
+    border: 5px solid transparent;
+    border-top-color: var(--medium);
+    transform: translateX(-5px);
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+}
+
+.tech-stack-mobile-item:hover::after, .tech-stack-mobile-item:hover::before {
+    opacity: 1;
 }
 
 @media screen and (min-width: 800px) {
-    .tech-stack-mobile, .tech-stack-mobile * {
+    .tech-stack-mobile {
         display: none;
     }
 
-    .tech-stack-desktop, .tech-stack-desktop * {
-        display: block;
-    }
-
     .tech-stack-desktop {
-        margin-top: 8rem;
+        margin-top: 6rem;
         display: flex;
         justify-content: space-between;
         gap: 1rem;
@@ -324,9 +357,9 @@ h4 {
     .tech-stack-desktop-item {
         width: 3rem;
         height: 3rem;
-        position: relative;
         z-index: 2;
         background-color: var(--contrast);
+        position: relative;
     }
     
     .tech-stack-desktop-item::before {
@@ -371,17 +404,6 @@ h4 {
     .tech-stack-desktop-item:hover::before {
         transform: translateY(0);
         color: white;
-    }
-    
-    @keyframes stretch-flip {
-        0% {transform: scaleY(1);}
-        50% {transform: scaleY(0);}
-        100% {transform: scaleY(1);}
-    }
-    
-    .tech-stack-desktop.flipping {
-        animation: stretch-flip 300ms ease 10ms infinite forwards;
-        background-color: pink;
     }
 }
 
@@ -488,7 +510,7 @@ h4 {
     .carousel-button {   
         display: block; 
         width: 32px;
-        fill: var(--base);
+        stroke: var(--base);
     }
     
     .carousel-button.inactive {
@@ -592,32 +614,24 @@ h4 {
 
 .contact-form #fname {
     width: 60%;
+    animation: fname 800ms ease 1;
+    animation-delay: 3s;
 }
 
 .contact-form #lname {
     width: 80%;
+    animation: lname 900ms ease 1;
+    animation-delay: 3s;
 }
 
 .contact-form #email {
     width: 40%;
+    animation: email 700ms ease 1;
+    animation-delay: 3s;
 }
 
 .contact-form #message {
     width: 90%;
-}
-
-.contact-form #fname:hover {
-    animation: fname 600ms ease 1;
-}
-
-.contact-form #lname:hover {
-    animation: lname 700ms ease 1;
-}
-
-.contact-form #email:hover {
-    animation: email 500ms ease 1;
-}
-
-.contact-form #message:hover {
-    animation: message 600ms ease 1;
+    animation: message 1000ms ease 1;
+    animation-delay: 3s;
 }

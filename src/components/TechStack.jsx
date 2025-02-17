@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const TechStack = () => {
     const stack = [
         {name: 'HTML5', src: '/images/html.webp', yoe: '4+ YOE'},
@@ -13,11 +11,9 @@ const TechStack = () => {
         {name: 'SASS', src: '/images/sass.webp', yoe: '2 YOE'},
     ]
 
-    const [ isFlipping, setIsFlipping ] = useState(false);
-
     return (
         <div>
-            <div className={`tech-stack-desktop ${isFlipping ? 'flipping' : ''}`} onClick={() => setIsFlipping(true)} onMouseLeave={() => setIsFlipping(false)}>
+            <div className='tech-stack-desktop'>
                 {stack.map((item) => (
                     <div key={item.name} className='tech-stack-desktop-item' data-yoe={item.yoe} data-tech={item.name}>
                         <img src={item.src} alt={`${item.name}  - ${item.yoe}`} />
