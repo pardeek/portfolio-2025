@@ -9,23 +9,27 @@ const ContactForm = () => {
                 </p>
                 <input 
                     type='text'
-                    placeholder='First Name'
+                    placeholder='First Name (required)'
                     id='fname'
+                    required
                 />
                 <input 
                     type='text'
-                    placeholder='Last Name'
+                    placeholder='Last Name (required)'
                     id='lname'
+                    required
                 />
                 <input 
                     type='email'
                     id='email'
-                    placeholder='Email Address'
+                    placeholder='Email Address (required)'
+                    required
                 />
                 <textarea 
                     rows='6'
-                    placeholder='Message'
+                    placeholder='Message (required)'
                     id='message'
+                    required
                 />
                 <button className='hmd-button-1' type='submit'>Send</button>
             </form>

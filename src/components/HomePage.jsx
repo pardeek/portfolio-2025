@@ -11,7 +11,7 @@ const HomePage = () => {
                     client:load 
                     text='Front-end Web Developer'
                 />
-                <p>Proficient in HTML, CSS, JS, and React.</p>
+                <p>Proficient in HTML, CSS, JS, and React. <a href='https://github.com/pardeek/portfolio-2025'>View this project on GitHub.</a></p>
                 
             </div>
             <div className='button-cont'>
