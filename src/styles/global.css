@@ -92,7 +92,7 @@ img {
     display: none;
 }
 
-@media screen and (min-height: 700px) {
+@media screen and (min-height: 600px) {
     .page-subtitle {
         display: block;
     }
@@ -498,33 +498,49 @@ h4 {
 
 /*Skills Cards Styling*/
 .skills-cards-container {
+    overflow-x: scroll;
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
-    margin: 2rem auto;
+    margin-top: 2rem;
 }
 
 .skills-card {
     background-color: var(--contrast);
-    width: clamp(2rem, 25vw, 20rem);
-    height: auto;
-    border-radius: 15px;
-    overflow-y: hidden;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 18rem;
+    min-width: 18rem;
 }
 
 .skills-card-slider {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap: .6rem;
-    transform: translateY(calc(100%));
-    pointer-events: none;
-    transition: transform ease 300ms;
+    height: 100%;
 }
 
-.skills-card:hover .skills-card-slider {
-    transform: translateY(0);
+.skills-card-slider p {
+    margin-top: .6rem;
+}
+
+
+@media screen and (min-width: 1000px) {
+    .skills-cards-container {
+        overflow-x: hidden;
+        flex-wrap: wrap;
+    }
+
+    .skills-card {
+        overflow-y: hidden;
+    }
+
+    .skills-card-slider {
+        transform: translateY(calc(100% - 1.2rem));
+        transition: transform 300ms ease;
+        pointer-events: none;
+    }
+
+    .skills-card:hover .skills-card-slider {
+        transform: translateY(0);
+    }
+
 }
 
 /*Contact Form Styling*/
