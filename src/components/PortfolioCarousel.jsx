@@ -5,13 +5,13 @@ import { DirectionalButtonFill } from "./AnimatedButtons";
 const ProjectCarousel = () => {
     const projects = [ //I have css classes for up to 10 projects. If you add more than that, update the css.
         {
-            head: 'Half Moon Designs Website', 
+            head: 'Half Moon Designs Site', 
             subhead: 'Astro | Tailwind | Netlify', 
             text: 'Personal freelance brochure site built with Astro and Tailwind and deployed via Netlify.', 
             src: '/images/halfmoon.webp',
             visit: 'https://halfmoondesigns.co'
         }, {
-            head: 'Corvallis Celtic Festival Website', 
+            head: 'Corvallis Celtic Fest Site', 
             subhead: 'Astro | Contentful | Netlify', 
             text: 'Client site for annual music and culture festival built with Astro and Contentful headless CMS and deployed via Netlify.', 
             src: '/images/celtic.webp',
@@ -25,7 +25,7 @@ const ProjectCarousel = () => {
             caseStudy: 'https://blog.katiepardee.com/customizing-gutenbergs-rich-text-editor-toolbar-to-add-tooltip-formatting/',
             visit: 'https://blog.katiepardee.com'
         }, {
-            head: 'DIY Plans and More', 
+            head: 'DIY Plans & More Site', 
             subhead: 'Astro | Headless Wordpress | Netlify', 
             text: 'Work in progress client site.', 
             src: '/images/diyPlans.webp',
