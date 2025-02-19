@@ -37,6 +37,10 @@
     color: white;
 }
 
+html {
+    background-color: var(--contrast);
+}
+
 html, body {
     min-height: 100dvh;
     scroll-behavior: smooth;
@@ -113,7 +117,7 @@ img {
     }
 }
 
-@media screen and (min-height: 850px) { 
+@media screen and (min-height: 700px) { 
     .page-description {
         display: block;
     }
@@ -222,7 +226,7 @@ a:hover {
 .button-cont {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1.2rem;
 }
 
 .hmd-button-1 {

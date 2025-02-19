@@ -5,19 +5,19 @@ import { DirectionalButtonFill } from "./AnimatedButtons";
 const ProjectCarousel = () => {
     const projects = [ //I have css classes for up to 10 projects. If you add more than that, update the css.
         {
-            head: 'Half Moon Designs Site', 
-            subhead: 'Astro | Tailwind | Netlify', 
-            text: 'Personal freelance brochure site built with Astro and Tailwind and deployed via Netlify.', 
-            src: '/images/halfmoon.webp',
-            visit: 'https://halfmoondesigns.co'
-        }, {
             head: 'Corvallis Celtic Fest Site', 
             subhead: 'Astro | Contentful | Netlify', 
             text: 'Client site for annual music and culture festival built with Astro and Contentful headless CMS and deployed via Netlify.', 
             src: '/images/celtic.webp',
             caseStudy: 'https://blog.katiepardee.com/case-study-corvallis-celtic-festival-website/',
             visit: 'https://corvalliscelticfestival.org'
-        }, {
+        },{
+            head: 'Half Moon Designs Site', 
+            subhead: 'Astro | Tailwind | Netlify', 
+            text: 'Personal freelance brochure site built with Astro and Tailwind and deployed via Netlify.', 
+            src: '/images/halfmoon.webp',
+            visit: 'https://halfmoondesigns.co'
+        },  {
             head: "Katie's Web Dev Blog", 
             subhead: 'Wordpress | Custom Gutenberg', 
             text: 'My Web Dev Blog where I write about projects and other topics.', 
@@ -27,7 +27,7 @@ const ProjectCarousel = () => {
         }, {
             head: 'DIY Plans & More Site', 
             subhead: 'Astro | Headless Wordpress | Netlify', 
-            text: 'Work in progress client site.', 
+            text: 'Work-in-progress digital product ecommerce site.', 
             src: '/images/diyPlans.webp',
             visit: 'https://diyplans.netlify.app/'
         }, {

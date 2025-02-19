@@ -1,7 +1,7 @@
 const TechStack = () => {
     const stack = [
-        {name: 'HTML5', src: '/images/html.webp', yoe: '4+ YOE'},
-        {name: 'CSS3', src: '/images/css.webp', yoe: '4+ YOE'},
+        {name: 'HTML5', src: '/images/html.webp', yoe: '4 YOE'},
+        {name: 'CSS3', src: '/images/css.webp', yoe: '4 YOE'},
         {name: 'JS(ES6)', src: '/images/js.webp', yoe: '4 YOE'},
         {name: 'React', src: '/images/react.webp', yoe: '1 YOE'},
         {name: 'Astro', src: '/images/astro.webp', yoe: '1 YOE'},

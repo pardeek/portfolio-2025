@@ -6,7 +6,7 @@ const SkillsPage = () => {
             <div className='col'>
                 <h2 className='title-font'>Let's talk <span className='text-gradient'>skills</span>.</h2>
                 <h3 className='subtitle'>4+ years in Web Development</h3>
-                <p>Proficient in HTML, CSS, JavaScript (ES6), and React.</p>                
+                <p>Experience in a wide variety of tools and skills with a solid command over whole project management.</p>                
             </div>
             <SkillsCards client:load />
         </div>
